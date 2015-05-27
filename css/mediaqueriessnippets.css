@@ -1,0 +1,160 @@
+@media (max-width: 380px) {
+    .miniDownloadLinksHeading {
+        display: block;
+    }
+    .app-store, .google-play {
+        margin: 2px 2px;
+    }
+    .app-store {
+        background: url("../images/icons/dlappstorelogo.png") no-repeat scroll 0 0 transparent;
+        display: inline-block;
+        background-size: 100%;
+        width: 44px;
+        height: 44px;
+    }
+    .google-play {
+        background: url("../images/icons/dlgoogleplaylogo.png") no-repeat scroll 0 0 transparent;
+        display: inline-block;
+        background-size: 100%;
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 420px) {
+    .app-store, .google-play {
+        margin: 6px 6px;
+    }
+    .mastfoot {
+        font-size: 18px;
+    }
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+    /* Pull out the header and footer */
+    .masthead {
+        position: fixed;
+        top: 0;
+    }
+    .mastfoot {
+        position: relative;
+        bottom: 0;
+    }
+    .mastfoot {
+        width: 100%;
+        position: inherit;
+        bottom: 0;
+    }
+    /* Start the vertical centering */
+    .site-wrapper-inner {
+        vertical-align: middle;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Handle the widths */
+    .cover-container {
+        max-width: 40%; /* Must be percentage or pixels for horizontal alignment */
+    }
+    .masthead,
+    .mastfoot,
+    .inner {
+        max-width: 100%;
+    }
+}
+
+/*
+ * For Devices
+ */
+
+/* ----------- Tablets ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {}
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {}
+
+/* Landscape */
+@media only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 800px) and (max-device-width: 1600px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    /* Handle the widths */
+    .cover-container {
+        max-width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    }
+    .masthead,
+    .mastfoot,
+    .inner {
+        max-width: 100%;
+    }
+    .bengga-heading {
+        text-align: left;
+        font-size: 4rem;
+        color: #fd515d;
+        padding: 10px;
+        margin: 0;
+    }
+    .bengga-post {
+        max-width: 900px;
+    }
+    .downloadLinksHolder, .app-store, .google-play {
+        padding: 2px;
+    }
+}
+
+/* ----------- Tablets Devices w/ widths larger than 1600px ( still with issues, get back on this ) ----------- */
+
+@media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .inner {
+        font-size: 1.5em;
+    }
+    .app-store, .google-play {
+        max-width: 50%;
+        padding: 10px;
+    }
+}
+
+/* ----------- iPhone, Nexus, Samsung, Sony ----------- */
+
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3), only screen and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-width: 320px) and (max-device-width: 736px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    /* Handle the widths */
+    .cover-container {
+        max-width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    }
+    .bengga {
+        padding: 0;
+    }
+    .bengga-heading {
+        text-align: left;
+        font-size: 3rem;
+        color: #fff;
+        padding: 20px;
+        margin: 0;
+        background-color: #fd515d;
+    }
+    .rounded-corners {
+        overflow: visible;
+    }
+    .downloadLinksHolder {
+        height: 40%;
+    }
+}
+
+/* ----------- Wearables ----------- */
+@media (max-device-width: 218px) and (max-device-height: 281px), (max-device-width: 42mm) and (min-device-width: 38mm) {
+    .bengga-heading {
+        text-align: left;
+        padding: 2%;
+        font-size: 0.5em;
+    }
+    .downloadLinksHolder {
+        display: none;
+    }
+    .mastfoot {
+        display: none;
+    }
+}
