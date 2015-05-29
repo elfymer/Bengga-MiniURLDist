@@ -97,6 +97,23 @@ body {
 }
 
 /*
+ * Calls
+ */
+
+p.uppercase {
+    text-transform: uppercase;
+}
+
+/*
+ * Header
+ */
+
+/* Keep Navigation Bar Toggle button hidden by default */
+.navbar-toggle {
+    display: none;
+}
+
+/*
  * Bengga
  */
 
@@ -116,6 +133,12 @@ body {
     color: #fd515d;
     padding: 30px;
     margin: 0;
+}
+
+.bengga-logo {
+    font-family: fontHarlow;
+    color: #fd515d;
+    font-size: 24px;
 }
 
 /* bengga post*/
@@ -197,9 +220,14 @@ body.bs-cover .mastfoot .inner {
     text-shadow: none;
 }
 
+.masthead {
+    display: none;
+}
+
 .mastfoot {
     border-top: 1px solid #CBCBCB;
-    font-size: 22px;
+    font-size: 16px;
+    font-weight: 600;
     /* background-color: #3C0;
     border: 1px solid #F30;
     padding: 10px 10px;
@@ -249,10 +277,43 @@ body.bs-cover .mastfoot .inner {
     }
 }*/
 
+@media (max-width: 480px) {
+    .masthead {
+        display: block;
+    }
+    .bengga-heading {
+        display: none;
+    }
+    .miniDownloadLinksHeading {
+        display: block;
+    }
+    .app-store, .google-play {
+        margin: 2px 2px;
+    }
+    .app-store {
+        background: url("../images/icons/dlappstorelogo.png") no-repeat scroll 0 0 transparent;
+        display: inline-block;
+        background-size: 100%;
+        width: 44px;
+        height: 44px;
+    }
+    .google-play {
+        background: url("../images/icons/dlgoogleplaylogo.png") no-repeat scroll 0 0 transparent;
+        display: inline-block;
+        background-size: 100%;
+        width: 44px;
+        height: 44px;
+    }
+    .mastfoot {
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
-    /* allow responsive padding starting width of 480px to less*/
+    /* allow responsive padding between 480px and 320px */
     .bengga, .cover, .inner {
-        padding: 2%;
+        padding: 1%;
     }
 }
 
@@ -260,6 +321,9 @@ body.bs-cover .mastfoot .inner {
     /*snaps the views to edges*/
     .bengga, .cover, .inner {
         padding: 0;
+    }
+    .bengga-post.rounded-corners {
+        overflow: visible;
     }
     .downloadLinksHolder {
         /*padding: 0;*/
