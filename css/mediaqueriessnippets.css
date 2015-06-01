@@ -157,4 +157,7 @@
     .mastfoot {
         display: none;
     }
+    .col-nav {
+        display: block;
+    }
 }

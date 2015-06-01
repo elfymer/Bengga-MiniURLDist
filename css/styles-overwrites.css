@@ -100,7 +100,7 @@ body {
  * Calls
  */
 
-p.uppercase {
+.uppercase {
     text-transform: uppercase;
 }
 
@@ -111,6 +111,17 @@ p.uppercase {
 /* Keep Navigation Bar Toggle button hidden by default */
 .navbar-toggle {
     display: none;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FD515D !important;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 3px;
+    border-radius: 6px;
 }
 
 /*
@@ -281,6 +292,13 @@ body.bs-cover .mastfoot .inner {
     .masthead {
         display: block;
     }
+    .container > .navbar {
+        margin: 0 auto;
+    }
+    .container, .navbar-brand {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
     .bengga-heading {
         display: none;
     }
@@ -308,16 +326,39 @@ body.bs-cover .mastfoot .inner {
         font-size: 14px;
         font-weight: 600;
     }
+    body.bs-cover .inner {
+        color: #FFF;
+        text-align: center;
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+    }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
     /* allow responsive padding between 480px and 320px */
-    .bengga, .cover, .inner {
-        padding: 1%;
+    .inner {
+        padding: 2%;
+    }
+    .masthead > .inner, .bengga, .downloadLinksHolder {
+        padding: 0;
     }
 }
 
 @media (max-width: 320px) {
+    /*
+     * CALLS
+     */
+    .not_mobile {
+        display: none;
+    }
+    /*
+     *
+     */
+    .bengga-logo {
+        position: fixed;
+    }
+    .navbar-toggle {
+        display: block;
+    }
     /*snaps the views to edges*/
     .bengga, .cover, .inner {
         padding: 0;
@@ -325,7 +366,8 @@ body.bs-cover .mastfoot .inner {
     .bengga-post.rounded-corners {
         overflow: visible;
     }
-    .downloadLinksHolder {
-        /*padding: 0;*/
+    .miniDownloadLinksHeading {
+        margin-top: 2%;
+        margin-bottom: 2%;
     }
 }
