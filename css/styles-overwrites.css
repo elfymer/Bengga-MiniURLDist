@@ -33,7 +33,7 @@ body {
 body {
     font-family: fontbodyHNLTComThCn;
     color: #727272 !important;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
@@ -108,11 +108,6 @@ body {
  * Header
  */
 
-/* Keep Navigation Bar Toggle button hidden by default */
-.navbar-toggle {
-    display: none;
-}
-
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #FD515D !important;
 }
@@ -122,6 +117,11 @@ body {
     width: 22px;
     height: 3px;
     border-radius: 6px;
+}
+
+/* Keep Navigation Bar Toggle button and menu hidden by default */
+.col-nav, .navbar-toggle {
+    display: none;
 }
 
 /*
@@ -140,7 +140,7 @@ body {
 
 .bengga-heading {
     font-family: fontHarlow;
-    font-size: 8rem;
+    font-size: 9rem;
     color: #fd515d;
     padding: 30px;
     margin: 0;
@@ -247,7 +247,7 @@ body.bs-cover .mastfoot .inner {
 
 /*** Media Queries ***/
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (min-height: 1024px) {
     /* Pull out the header and footer */
     .masthead {
         position: fixed;
@@ -287,10 +287,14 @@ body.bs-cover .mastfoot .inner {
         bottom: 0;
     }
 }*/
+@media (min-width: 480px) {}
 
 @media (max-width: 480px) {
     .masthead {
         display: block;
+    }
+    .masthead-nav {
+        display: none;
     }
     .container > .navbar {
         margin: 0 auto;
@@ -345,14 +349,17 @@ body.bs-cover .mastfoot .inner {
 
 @media (max-width: 320px) {
     /*
-     * CALLS
-     */
+    * CALLS
+    */
     .not_mobile {
         display: none;
     }
     /*
      *
      */
+    .col-nav {
+        display: block;
+    }
     .bengga-logo {
         position: fixed;
     }
@@ -369,5 +376,22 @@ body.bs-cover .mastfoot .inner {
     .miniDownloadLinksHeading {
         margin-top: 2%;
         margin-bottom: 2%;
+    }
+}
+
+/* ----------- Wearables ----------- */
+/**and (max-device-height: 281px)*/
+@media only screen and (max-device-width: 218px), (max-device-width: 42mm) and (min-device-width: 38mm) {
+    .site-wrapper {
+        min-width: 38mm;
+    }
+    .masthead {
+        display: none;
+    }
+    .bengga {
+        padding: 2%;
+    }
+    .bengga-post.rounded-corners {
+        overflow: hidden;
     }
 }
