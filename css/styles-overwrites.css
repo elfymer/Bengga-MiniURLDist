@@ -165,17 +165,7 @@ body {
     padding-bottom: 100%;
 }
 
-.bengga-image {
-    background-size: 100% 100%;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-color: #ddd;
-}
-
-.bengga-video {
+.bengga-content {
     background-size: 100% 100%;
     bottom: 0;
     left: 0;
@@ -239,15 +229,12 @@ body.bs-cover .mastfoot .inner {
     border-top: 1px solid #CBCBCB;
     font-size: 16px;
     font-weight: 600;
-    /* background-color: #3C0;
-    border: 1px solid #F30;
-    padding: 10px 10px;
-    margin: 0 0 20px;*/
 }
 
 /*** Media Queries ***/
 
-@media (min-width: 1200px) and (min-height: 1024px) {
+/*** Laptops and Large Screens ***/
+@media screen and (min-device-width: 1600px), (min-device-height: 1024px) {
     /* Pull out the header and footer */
     .masthead {
         position: fixed;
@@ -262,13 +249,15 @@ body.bs-cover .mastfoot .inner {
     }
 }
 
-@media (max-width: 1200px) {
+/*** All Devices ***/
+@media (max-width: 1600px), (max-height: 1024px) {
     /* Attach footer to cover */
     .mastfoot {
-        /*background-color: #0fa;*/
         position: relative;
         width: 100%;
         bottom: 0;
+        left: 0;
+        margin: 0;
     }
 }
 
@@ -278,16 +267,6 @@ body.bs-cover .mastfoot .inner {
         vertical-align: middle;
     }
 }
-
-/*@media (max-width: 768px) {
-    .mastfoot {
-        background-color: #f00;
-        width: 100%;
-        position: inherit;
-        bottom: 0;
-    }
-}*/
-@media (min-width: 480px) {}
 
 @media (max-width: 480px) {
     .masthead {
